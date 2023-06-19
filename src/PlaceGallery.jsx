@@ -33,7 +33,6 @@ export default function PlaceGallery({ place }) {
               <div>
                 <img
                   src={
-                    "https://bookingwebsitebackend.onrender.com/uploads/" +
                     photo
                   }
                   alt=""
@@ -55,7 +54,7 @@ export default function PlaceGallery({ place }) {
                 onClick={() => setShowAllPhotos(true)}
                 className="aspect-square cursor-pointer object-cover"
                 src={
-                  "https://bookingwebsitebackend.onrender.com/uploads/" +
+                  
                   place.photos[0]
                 }
                 alt=""
@@ -69,7 +68,7 @@ export default function PlaceGallery({ place }) {
               onClick={() => setShowAllPhotos(true)}
               className="aspect-square cursor-pointer object-cover"
               src={
-                "https://bookingwebsitebackend.onrender.com/uploads/" +
+               
                 place.photos[1]
               }
               alt=""
@@ -81,7 +80,7 @@ export default function PlaceGallery({ place }) {
                 onClick={() => setShowAllPhotos(true)}
                 className="aspect-square cursor-pointer object-cover relative top-2"
                 src={
-                  "https://bookingwebsitebackend.onrender.com/uploads/" +
+                
                   place.photos[2]
                 }
                 alt=""

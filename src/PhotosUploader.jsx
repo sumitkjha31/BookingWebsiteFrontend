@@ -61,7 +61,7 @@ export default function PhotosUploader({ addedPhotos, onChange }) {
               <img
                 className="rounded-2xl w-full object-cover"
                 src={
-                  "https://bookingwebsitebackend.onrender.com/uploads/" + link
+                 link
                 }
                 alt=""
               />
