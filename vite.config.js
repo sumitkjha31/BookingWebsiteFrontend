@@ -9,4 +9,7 @@ export default defineConfig({
       fallbackPath: '*',
     }),
   ],
+  server: {
+    historyFallback: false,
+  },
 });
