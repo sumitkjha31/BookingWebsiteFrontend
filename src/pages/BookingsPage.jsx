@@ -12,7 +12,7 @@ export default function BookingsPage() {
     axios.get("/bookings").then((response) => {
       setBookings(response.data);
     });
-  }, []);
+  }, [bookings]);
   return (
     <div>
       <AccountNav />

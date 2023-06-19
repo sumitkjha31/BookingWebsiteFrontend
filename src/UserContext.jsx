@@ -14,8 +14,7 @@ export function UserContextProvider({ children }) {
         axios.defaults.headers.common.Authorization = `Bearer ${token}`;
       }
 
-      axios
-        .get("/profile", { withCredentials: true })
+      axios.get("/profile", { withCredentials: true })
         .then(({ data }) => {
           setUser(data);
           setReady(true);
