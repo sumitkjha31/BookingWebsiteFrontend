@@ -5,16 +5,18 @@ import axios from "axios";
 import PlaceImg from "../PlaceImg";
 export default function PlacesPage() {
   const [places,setPlaces] = useState([]);
- // This function is called once, when the component mounts.
-const memoizedPlaces = useMemo(() => {
-  return axios.get("/user-places").then(({ data }) => {
-  return data;
-  });
-  }, []);
-  
+ 
+
   useEffect(() => {
-  setPlaces(memoizedPlaces);
-  }, [memoizedPlaces]);
+    const token = localStorage.getItem("accessToken");
+
+    if (token) {
+      axios.defaults.headers.common.Authorization = `Bearer ${token}`;
+    }
+    axios.get('/user-places').then(({data}) => {
+      setPlaces(data);
+    });
+  }, []);
   return (
     <div>
       <AccountNav />

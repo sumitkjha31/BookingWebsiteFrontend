@@ -9,6 +9,11 @@ export default function BookingPage() {
   const {id} = useParams();
   const [booking,setBooking] = useState(null);
   useEffect(() => {
+    const token = localStorage.getItem("accessToken");
+
+    if (token) {
+      axios.defaults.headers.common.Authorization = `Bearer ${token}`;
+    }
     if (id) {
       axios.get('/bookings').then(response => {
         const foundBooking = response.data.find(({_id}) => _id === id);

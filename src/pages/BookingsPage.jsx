@@ -9,10 +9,15 @@ import BookingDates from "../BookingDates";
 export default function BookingsPage() {
   const [bookings, setBookings] = useState([]);
   useEffect(() => {
+    const token = localStorage.getItem("accessToken");
+
+    if (token) {
+      axios.defaults.headers.common.Authorization = `Bearer ${token}`;
+    }
     axios.get("/bookings").then((response) => {
       setBookings(response.data);
     });
-  }, [bookings]);
+  }, []);
   return (
     <div>
       <AccountNav />
