@@ -1,15 +1,7 @@
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
-import historyApiFallback from 'vite-plugin-history-api-fallback';
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
 
+// https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [
-    react(),
-    historyApiFallback({
-      fallbackPath: '*',
-    }),
-  ],
-  server: {
-    historyFallback: false,
-  },
-});
+  plugins: [react()],
+})
