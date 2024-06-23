@@ -13,7 +13,7 @@ import PlacePage from "./pages/PlacePage";
 import BookingsPage from "./pages/BookingsPage";
 import BookingPage from "./pages/BookingPage";
 
-axios.defaults.baseURL = "https://bookingwebsitebackend.onrender.com";
+axios.defaults.baseURL = "https://bookingwebsitebackend-8u4x.onrender.com";
 axios.defaults.withCredentials = true;
 
 function App() {
